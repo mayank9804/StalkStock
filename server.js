@@ -19,7 +19,9 @@ app.use((req,res,next)=>{
 });
 
 let stockRouter = require("./src/routes/stockrouter")
-
+app.get('/',(req,res)=>{
+    res.send("PLEASE VISIT https://mayank9804.github.io/stalkstockangular/  to check the UI")
+})
 app.use('/api/stock/',stockRouter)
 
 app.listen(process.env.PORT||3000,()=>{
